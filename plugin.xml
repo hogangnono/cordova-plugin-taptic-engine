@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <plugin
     id="cordova-plugin-taptic-engine"
-    version="2.1.0"
+    version="2.1.0-hogangnono"
     xmlns="http://apache.org/cordova/ns/plugins/1.0">
 
   <name>Taptic Engine</name>
@@ -34,6 +34,15 @@
 
     <!-- required only for the unofficial API -->
     <framework src="AudioToolbox.framework" weak="true" />
+  </platform>
+
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="TapticEngine">
+        <param name="android-package" value="com.hogangnono.cordova.plugin.taptic.TapticEngine"/>
+      </feature>
+    </config-file>
+    <source-file src="src/android/TapticEngine.java" target-dir="src/com/hogangnono/cordova/plugin/taptic" />
   </platform>
 
 </plugin>

@@ -24,20 +24,25 @@ TapticEngine.prototype.notification = function (options, onSuccess, onFail) {
   exec(onSuccess, onFail, "TapticEngine", "notification", [options]);
 };
 
-TapticEngine.prototype.selection = function (onSuccess, onFail) {
-  exec(onSuccess, onFail, "TapticEngine", "selection", []);
+TapticEngine.prototype.selection = function (onSuccess, onFail, sec) {
+  exec(onSuccess, onFail, "TapticEngine", "selection", [sec]);
 };
 
 TapticEngine.prototype.impact = function (options, onSuccess, onFail) {
   exec(onSuccess, onFail, "TapticEngine", "impact", [options]);
 };
 
+TapticEngine.prototype.vibrate = function (onSuccess, onFail, sec) {
+  exec(onSuccess, onFail, "TapticEngine", "vibrate", [sec]);
+};
+
+
 TapticEngine.prototype.gestureSelectionStart = function (onSuccess, onFail) {
   exec(onSuccess, onFail, "TapticEngine", "gestureSelectionStart", []);
 };
 
-TapticEngine.prototype.gestureSelectionChanged = function (onSuccess, onFail) {
-  exec(onSuccess, onFail, "TapticEngine", "gestureSelectionChanged", []);
+TapticEngine.prototype.gestureSelectionChanged = function (onSuccess, onFail, sec) {
+  exec(onSuccess, onFail, "TapticEngine", "gestureSelectionChanged", [sec]);
 };
 
 TapticEngine.prototype.gestureSelectionEnd = function (onSuccess, onFail) {
